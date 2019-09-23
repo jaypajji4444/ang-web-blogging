@@ -1,0 +1,57 @@
+{
+    id:1 ,
+    title:"Java",
+    short_desc:"Java is beatiful language" ,
+    author: "JayMehta",
+    image: "assets/images/img1.jpg",
+    created_at:"1-jan",
+},
+
+{
+    id:2 ,
+    title:"Scala",
+    short_desc:"Scala is beatiful language" ,
+    author: "JayMehta",
+    image: "assets/images/img2.jpg",
+    created_at:"1-jan"
+},
+
+{
+    id:3 ,
+    title:"Node",
+    short_desc:"Node is beatiful language" ,
+    author: "JayMehta",
+    image: "assets/images/img3.jpg",
+    created_at:"1-jan"
+},
+{
+    id:4 ,
+    title:"Javascript",
+    short_desc:"Javascript is beatiful language" ,
+    author: "JayMehta",
+    image: "assets/images/img4.jpg",
+    created_at:"1-jan"
+},
+{
+    id:5 ,
+    title:"PHP",
+    short_desc:"PHP is beatiful language" ,
+    author: "JayMehta",
+    image: "assets/images/img5.jpg",
+    created_at:"1-jan"
+},
+{
+    id:6,
+    title:"pava",
+    short_desc:"paaava is beatifully language" ,
+    author: "JayMehta",
+    image: "assets/images/img6.jpg",
+    created_at:"1-jan"
+}
+
+
+
+
+db.blogs.update(
+{id : 3},
+{$set: { "description" : "One design goal of node is portability, which means that programs written for the node platform must run similarly on any combination of hardware and operating system with adequate run time support. This is achieved by compiling the node language code to an intermediate representation called node bytecode, instead of directly to architecture-specific machine code. node bytecode instructions are analogous to machine code, but they are intended to be executed by a virtual machine (VM) written specifically for the host hardware. End users commonly use a node Runtime Environment (JRE) installed on their own machine for standalone node applications, or in a web browser for node applets."}});

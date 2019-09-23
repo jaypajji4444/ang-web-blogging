@@ -1,0 +1,65 @@
+
+<!--------
+<br>
+<section class="blog-detail mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8" >
+          <div class="blog-left">
+            <h1>Sample blog post 1</h1>
+            <div class="posted-on">
+                <p>by <span>JayMehta</span> on <span>October 22, 2018</span></p>
+            </div>
+            <div class="detail-img">
+               <img src="assets/images/img5.jpg" alt="blog1" />
+            </div>
+            <div class="blog-desc">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+          <app-blogpost-recent></app-blogpost-recent>
+          <app-categories></app-categories>
+        </div>
+      </div>
+    </div>
+  </section>
+  --->
+
+<br><br>
+  <section class="blog-detail mtb-40">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8" *ngFor="let data1 of data">
+       
+       
+          <!-- <div class="blog-left" *ngIf="blog$ | async as blog else loading">_-----async pope means to automatically subscribe to the observable. -->
+            <div class="blog-left"  >
+            <h1>{{data1?.title}}</h1>
+            <div class="posted-on">
+                <p>
+                  by <span>{{data1?.author}}</span> on 
+                  <span>{{data1?.created_at | date:'mediumDate'}}</span>
+                </p>
+            </div>
+            <div class="detail-img">
+               <img src="{{data1?.image}}" alt="{{data1?.title}}" />
+            </div>
+            <div class="blog-desc" [innerHTML]="data1?.description"></div> 
+          </div>
+          <ng-template #loading>
+              <div class="service-error">
+                  <h3>Error loading of the blog detail. Please try again later.</h3>
+              </div>
+          </ng-template>
+        </div>
+        <div class="col-md-4">
+          <app-blogpost-recent></app-blogpost-recent>
+          <app-categories></app-categories>
+        </div>
+      </div>
+    </div>
+  </section>
