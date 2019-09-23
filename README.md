@@ -1,13 +1,7 @@
 # Blogger
 
 
+Blogging-Website
+Blogging website created using MEAN stack
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-**1>>> Use Following Command to download all your dependencies:
-
-npm install
-
-**2>>> To Start :ng serve
+Note: 1.After Downloading ,install the required dependencies using following command: npm install 2.Then go to the directory and type following comaand to run the site: ng serve
